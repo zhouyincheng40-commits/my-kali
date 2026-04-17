@@ -1,0 +1,19 @@
+{
+    "name": "Kali-Python-Lab",
+    "image": "kalilinux/kali-rolling:latest",
+    "features": {
+        "ghcr.io/devcontainers/features/common-utils:1": {
+            "configureZshAsDefaultShell": true
+        }
+    },
+    "postCreateCommand": "apt-get update && apt-get install -y python3 python3-pip nmap sqlmap git curl && pip3 install requests",
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "ms-python.python",
+                "ms-python.vscode-pylint"
+            ]
+        }
+    },
+    "remoteUser": "root"
+}
